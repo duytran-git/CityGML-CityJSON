@@ -13,7 +13,6 @@ This project provides a Python script to analyze building height data from a Cit
 * Categorizes buildings into height ranges.
 * Creates a pie chart to visualize the distribution of building heights.
 ### Requirements
-* To run this script, you will need the following:
 * Libraries:
 
     os
@@ -26,7 +25,7 @@ This project provides a Python script to analyze building height data from a Cit
 
 ### File Structure
 
-* Vienna_102081_v20.city.json: The input CityJSON file containing city object data.
+* Vienna_102081_v20.city.json: The input CityJSON file containing city object data. It has been converted and upgraded from the CityGML file with citygml-tools and cjio command line.
 * main.py: The main Python script that processes the CityJSON data, calculates height distributions, and generates a pie chart.
 
 ### Functions
@@ -39,9 +38,10 @@ This project provides a Python script to analyze building height data from a Cit
 
 * Extracts building and building part heights from the CityJSON data.
 * Returns a dictionary of building IDs and their corresponding heights.
+
 #### 3. height_distribution(bd_heights):
 
-* Categorizes the buildings based on their heights into four categories:
+* Categorizes the buildings based on their heights into 4 categories:
 
     '0-10m',
 
@@ -52,9 +52,11 @@ This project provides a Python script to analyze building height data from a Cit
     '30m+'
 
 * Returns a pandas DataFrame showing the distribution of buildings across these height categories.
+
 #### 4. pie_chart(hd):
 
 * Generates a pie chart based on the height distribution.
+
 * Displays the chart with labeled height categories and percentage of buildings in each category.
 
 #### 5. main(file_path):
